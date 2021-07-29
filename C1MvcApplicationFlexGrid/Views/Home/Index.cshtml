@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model IEnumerable<Person>
+
+<c1-flex-grid id="flexGrid"
+              is-read-only="true"
+              auto-generate-columns="false"
+              class="grid">
+    <c1-items-source source-collection="@Model"></c1-items-source>
+    <c1-flex-grid-column binding="ID" width="0.4*"></c1-flex-grid-column>
+    <c1-flex-grid-column binding="Name" header="Name" width="*" name="Name"></c1-flex-grid-column>
+    <c1-flex-grid-column binding="Country" header="Country" width="*" name="Country"></c1-flex-grid-column>
+    <c1-flex-grid-column binding="Hired" header="Hired" width="*" name="Hired"></c1-flex-grid-column>
+</c1-flex-grid>

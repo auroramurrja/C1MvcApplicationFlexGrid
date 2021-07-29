@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@model IEnumerable<PrivacyType>
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+<c1-flex-grid id="flexGrid"
+              is-read-only="true"
+              auto-generate-columns="false"
+              class="grid">
+    <c1-items-source source-collection="@Model"></c1-items-source>
+    <c1-flex-grid-column binding="Id" width="0.4*"></c1-flex-grid-column>
+    <c1-flex-grid-column binding="Type" header="Type" width="*" name="type"></c1-flex-grid-column>
+    <c1-flex-grid-column binding="Number" header="Number" width="*" name="Number"></c1-flex-grid-column>
+</c1-flex-grid>
